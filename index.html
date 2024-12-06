@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Of Trailor Pump</title>
+    
+</head>
+
+<body>
+
+    <div class="form-container" id="pdf-content">
+        
+<table class="header-table">
+    <tr>
+        <td rowspan="2" style="width: 10%; text-align: center;">
+            <img src="hpcl-logo.png" alt="HP Logo" class="hp-logo">
+        </td>
+        <td class="header-left">
+            <strong>Hindustan Petroleum Corporation Limited</strong><br><br>
+            Mumbai Refinery
+        </td>
+        <td rowspan="3" class="header-right">
+            Issue No: 1<br>
+            Issue Date: 6/11/2024<br>
+            Rev No: 0<br>
+            Rev Date:<br>
+            <span class="no-wrap">Doc No: HPCL MR/FRM/F&S/08200-06</span>
+        </td>
+        
+    </tr>
+    <tr>
+        <td class="header-left">
+            <strong>Testing Of Trailor Pump</strong>
+        </td>
+       
+    </tr>
+   
+</table>
+
+ <!-- Date and Shift -->
+ <div class="flex-row">
+    <div class="form-group">
+        <label>DATE</label>
+        <input type="date" name="Date">
+    </div>
+    <div class="form-group">
+        <label>PUMP</label>
+        <input type="text" name="pump">
+    </div>
+    <div class="form-group">
+        <label>LOCATION</label>
+        <input type="text" name="location">
+    </div>
+</div>
+<div class="flex-row">   
+    <div class="form-group">
+        <label>TESTING PERFORMED BY</label>
+        <input type="text" name="testing">
+    </div>
+    <div class="form-group">
+        <label>SHIFT OFFICER</label>
+        <input type="text" name="shift">
+    </div>
+
+   
+</div>
+
+
+    <h3>1.Inspection Checklist</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Inspection Item</th>
+                <th>Result (Yes/No)</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Fuel Level</td>
+                <td>
+                    <select name="fuellevel">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="fuel"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Oil Level</td>
+                <td>
+                    <select name="oillevel">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="oil"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Coolant Level</td>
+                <td>
+                    <select name="coollevel">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="coolant"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Battery Condition</td>
+                <td>
+                    <select name="batcondition">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="battery"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Electrical Connections</td>
+                <td>
+                    <select name="connections">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="Electrical"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Water Inlet/Outlet Valve Check</td>
+                <td>
+                    <select name="valve">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="water"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Hoses and Couplings</td>
+                <td>
+                    <select name="couplings">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="hoses"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Pressure Gauge Operation</td>
+                <td>
+                    <select name="gauge">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="pressure"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Pump Start-Up</td>
+                <td>
+                    <select name="start">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="pump"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Rated Capacity Test (1800 LPM)</td>
+                <td>
+                    <select name="capacity">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="rated"></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>System Pressure Test</td>
+                <td>
+                    <select name="system">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="test"></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Shut Down</td>
+                <td>
+                    <select name="down">
+                        <option value="">Select</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </td>
+                <td><input type="text" name="shut"></td>
+            </tr>
+        </tbody>
+        </table>
+        <h3>2.Performance Parameters</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Result</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pump Flow Rate (LPM)</td>
+                <td><input type="text" name="pumpflow"></td>
+                <td><input type="text" name="LPM"></td>
+            </tr>
+            <tr>
+                <td>System Pressure (Bar)</td>
+                <td><input type="text" name="spbar"></td>
+                <td><input type="text" name="systempressure"></td>
+            </tr>
+            <tr>
+                <td>Discharge Pressure (Bar)</td>
+                <td><input type="text" name="dpbar"></td>
+                <td><input type="text" name="discharge"></td>
+            </tr>
+            <tr>
+                <td>Engine RPM</td>
+                <td><input type="text" name="RPM"></td>
+                <td><input type="text" name="Enginerpm"></td>
+            </tr>
+            <tr>
+                <td>Noise Level</td>
+                <td><input type="text" name="noiselevel"></td>
+                <td><input type="text" name="noise"></td>
+            </tr>
+            <tr>
+                <td>Vibration</td>
+                <td><input type="text" name="vibration"></td>
+                <td><input type="text" name="vibration1"></td>
+            </tr>
+        </tbody>
+    </table>
+
+     <!-- Remarks and Observations -->
+     <div class="form-group">
+        <label>3.REMARKS</label>
+        <textarea id="msg1" name="remarks"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>4.TESTED BY</label>
+        <input type="text" name="tested by">
+    </div>
+
+    <!-- Save as PDF Button (will be hidden in PDF) -->
+    <button id="saveAsPdf">Save as PDF</button>
+</div>
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+
